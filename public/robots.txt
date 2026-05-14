@@ -1,0 +1,8 @@
+# Robots.txt — ON DIGITAL
+# https://ondigital.pt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ondigital.pt/sitemap.xml

@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Simulador — ON DIGITAL">
+  <div class="bg-glow"></div>
+
+  <nav>
+    <a href="/" class="nav-logo">ON<span>DIGITAL</span></a>
+    <ul class="nav-links">
+      <li><a href="/#servicos">Serviços</a></li>
+      <li><a href="/#processo">Processo</a></li>
+      <li><a href="/#precos">Preços</a></li>
+      <li><a href="/#contacto">Contacto</a></li>
+      <li><a href="/simulador" style="color: var(--gold); font-weight: 600;">Simulador</a></li>
+    </ul>
+    <a href="/#contacto" class="nav-cta">Começar Projeto</a>
+  </nav>
+
+  <section class="simulator-hero">
+    <div class="simulator-hero-content">
+      <div class="section-label"><span class="num">01</span> Experiência Gratuita</div>
+      <h1 class="simulator-title">Simulador de <span>Presença Digital</span></h1>
+      <p class="simulator-desc">Não imagine o seu sucesso, veja-o. Preencha os detalhes abaixo e a nossa equipa de
+        design criará uma pré-visualização exclusiva do seu futuro website, sem qualquer compromisso.</p>
+    </div>
+  </section>
+
+  <section class="simulator-info">
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-icon">01</div>
+        <h3 class="info-title">Partilhe a sua Visão</h3>
+        <p class="info-text">Diga-nos o nome do seu negócio, o que faz e o estilo que prefere. Quanto mais detalhes,
+          mais precisa será a nossa proposta.</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">02</div>
+        <h3 class="info-title">Design à Medida</h3>
+        <p class="info-text">Os nossos designers analisam o seu ramo e criam um conceito visual que alia estética
+          premium a funcionalidade estratégica.</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">03</div>
+        <h3 class="info-title">Receba a Proposta</h3>
+        <p class="info-text">Em menos de 48 internal hours, enviamos-lhe uma maquete digital para que possa ver exatamente como a
+          sua marca brilhará online.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="simulator-section" id="form-anchor">
+    <div class="simulator-container">
+      <div class="form-header">
+        <h2 class="form-title">Inicie a sua Transformação</h2>
+        <p class="form-subtitle">Preencha o formulário para receber a sua simulação gratuita.</p>
+      </div>
+
+      <form class="simulator-form" id="sim-form-page">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nome do Negócio</label>
+            <input type="text" placeholder="Ex: Café Central" required>
+          </div>
+          <div class="form-group">
+            <label>Ramo de Atividade</label>
+            <input type="text" placeholder="Ex: Restauração, Imobiliária..." required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Cores de Preferência</label>
+            <input type="text" placeholder="Ex: Azul Marinho e Dourado">
+          </div>
+          <div class="form-group">
+            <label>Website de Inspiração (Opcional)</label>
+            <input type="url" placeholder="https://exemplo.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>O seu E-mail</label>
+            <input type="email" placeholder="nome@empresa.com" required>
+          </div>
+          <div class="form-group">
+            <label>Telemóvel / WhatsApp</label>
+            <input type="tel" placeholder="+351 9xx xxx xxx" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Mensagem ou Observações Adicionais</label>
+          <textarea placeholder="Conte-nos um pouco mais sobre os seus objetivos..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-simulate">Solicitar Pré-visualização Gratuita</button>
+        <p class="form-note">Ao clicar, concorda em ser contactado pela ON DIGITAL para fins de apresentação da
+          proposta.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="simulator-benefits">
+    <div class="benefits-inner">
+      <h2 class="benefits-title">O que vai receber?</h2>
+      <div class="benefits-list">
+        <div class="benefit">
+          <svg class="benefit-check" viewBox="0 0 24 24">
+            <path d="M20 6L9 17L4 12" />
+          </svg>
+          <span>Conceito Visual da Página Principal</span>
+        </div>
+        <div class="benefit">
+          <svg class="benefit-check" viewBox="0 0 24 24">
+            <path d="M20 6L9 17L4 12" />
+          </svg>
+          <span>Paleta de Cores e Tipografia Sugerida</span>
+        </div>
+        <div class="benefit">
+          <svg class="benefit-check" viewBox="0 0 24 24">
+            <path d="M20 6L9 17L4 12" />
+          </svg>
+          <span>Análise Preliminar de UX/UI</span>
+        </div>
+        <div class="benefit">
+          <svg class="benefit-check" viewBox="0 0 24 24">
+            <path d="M20 6L9 17L4 12" />
+          </svg>
+          <span>Orçamento Detalhado sem Compromisso</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">ON<span>DIGITAL</span></a>
+        <p class="footer-tagline">A elevar marcas através de design excecional e tecnologia inovadora.</p>
+      </div>
+      <div>
+        <h4 class="footer-link-title">Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="/#servicos">Serviços</a></li>
+          <li><a href="/#processo">Processo</a></li>
+          <li><a href="/#precos">Preços</a></li>
+          <li><a href="/simulador">Simulador</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-link-title">Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:ondigitalx@gmail.com">ondigitalx@gmail.com</a></li>
+          <li><a href="tel:+351911105998">+351 911 105 998</a></li>
+          <li><a href="https://wa.me/351911105998" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-link-title">Social</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/on_digitalx/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ON DIGITAL. Todos os direitos reservados.</p>
+      <p>Feito com &hearts; em Portugal</p>
+    </div>
+  </footer>
+</Layout>

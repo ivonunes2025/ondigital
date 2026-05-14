@@ -1,0 +1,183 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalURL?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "ON DIGITAL — Agência de Websites & Social Media em Portugal",
+  description = "Criamos websites rápidos, modernos e otimizados para SEO que convertem visitantes em clientes. Gestão de redes sociais, design UI/UX e marketing digital para marcas portuguesas.",
+  canonicalURL = Astro.url.href,
+  ogImage = "/og-image.jpg",
+} = Astro.props;
+
+const siteURL = "https://ondigital.pt";
+const fullTitle = title.includes("ON DIGITAL") ? title : `${title} | ON DIGITAL`;
+---
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <!-- ═══ ESSENCIAIS ═══ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content="agência digital, websites Portugal, design web, social media, SEO, UI UX, marketing digital, criação de websites, gestão redes sociais, Strapi CMS" />
+  <meta name="author" content="ON DIGITAL" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- ═══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={`${siteURL}${ogImage}`} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ON DIGITAL — Agência Digital em Portugal" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:site_name" content="ON DIGITAL" />
+
+  <!-- ═══ TWITTER / X CARDS ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`${siteURL}${ogImage}`} />
+  <meta name="twitter:image:alt" content="ON DIGITAL — Agência Digital em Portugal" />
+
+  <!-- ═══ FAVICONS & THEME ═══ -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <meta name="theme-color" content="#080808" />
+  <meta name="msapplication-TileColor" content="#080808" />
+
+  <!-- ═══ PERFORMANCE: DNS Prefetch & Preconnect ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+  <!-- ═══ FONTES ═══ -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ═══ ESTILOS ═══ -->
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body { background: #080808; color: #F5F2EC; margin: 0; }
+  </style>
+
+  <!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": `${siteURL}/#organization`,
+          "name": "ON DIGITAL",
+          "url": siteURL,
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${siteURL}/favicon.png`
+          },
+          "description": description,
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+351911105998",
+              "contactType": "customer service",
+              "availableLanguage": ["Portuguese"],
+              "contactOption": "TollFree"
+            }
+          ],
+          "email": "ondigitalx@gmail.com",
+          "sameAs": [
+            "https://www.instagram.com/on_digitalx/"
+          ],
+          "areaServed": "PT",
+          "knowsAbout": ["Web Design", "SEO", "Social Media Marketing", "UI/UX Design", "CMS Development"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": `${siteURL}/#website`,
+          "url": siteURL,
+          "name": "ON DIGITAL",
+          "description": description,
+          "publisher": {
+            "@id": `${siteURL}/#organization`
+          },
+          "inLanguage": "pt-PT"
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${canonicalURL}#webpage`,
+          "url": canonicalURL,
+          "name": fullTitle,
+          "isPartOf": {
+            "@id": `${siteURL}/#website`
+          },
+          "about": {
+            "@id": `${siteURL}/#organization`
+          },
+          "description": description,
+          "inLanguage": "pt-PT"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": `${siteURL}/#service`,
+          "name": "ON DIGITAL — Agência Digital",
+          "url": siteURL,
+          "telephone": "+351911105998",
+          "email": "ondigitalx@gmail.com",
+          "priceRange": "€€",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Portugal"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços Digitais",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Desenvolvimento Web",
+                  "description": "Websites rápidos, seguros e otimizados para converter visitantes em clientes fiéis."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Gestão de Redes Sociais",
+                  "description": "Estratégias de conteúdo que humanizam a sua marca e criam comunidades envolvidas."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Design UI/UX",
+                  "description": "Interfaces intuitivas focadas na experiência do utilizador e na identidade da marca."
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })}
+  </script>
+</head>
+<body>
+  <slot />
+  <script is:inline src="/script.js"></script>
+</body>
+</html>
